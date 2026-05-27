@@ -1,4 +1,4 @@
-name: CI/CD and Docker
+name: CI/CD and Docker demo
 
 on:
   push:
@@ -31,8 +31,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./it4409-ex4-cicd-docker/
-          file: ./it4409-ex4-cicd-docker/Dockerfile
+          context: .
+          file: Dockerfile
           push: true
           tags: doandangkhoa/it4409-sample:staging
 
